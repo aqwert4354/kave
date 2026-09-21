@@ -1,0 +1,275 @@
+/* Google Fonts betűtípusok importálása */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Globális alapbeállítások és változók */
+:root {
+    --primary-color: #2c1810;    /* Mély eszpresszó barna */
+    --accent-color: #c88a35;     /* Meleg arany/karamell */
+    --accent-hover: #b07424;
+    --bg-color: #faf6ee;         /* Krémszínű háttér */
+    --card-bg: #ffffff;          /* Fehér kártyák */
+    --text-color: #332722;       /* Sötétbarna szöveg */
+    --text-muted: #7a6a63;       /* Lágyabb szürkésbarna */
+    --border-color: #ebdcd0;
+    --radius: 12px;
+    --shadow: 0 10px 25px rgba(44, 24, 16, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Konténer */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Fejléc és Navigáció */
+.header {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #ebdcd0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(44, 24, 16, 0.75), rgba(44, 24, 16, 0.75)), 
+                url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    color: #ebdcd0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+/* Kínálat Címsorok */
+main {
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 45px;
+}
+
+/* Kávé Grid (Kártyák elrendezése) */
+.coffee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Kávé Kártya */
+.coffee-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.coffee-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(44, 24, 16, 0.15);
+}
+
+.card-image {
+    position: relative;
+    height: 220px;
+    width: 100%;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-content {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+}
+
+.card-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    color: var(--primary-color);
+}
+
+.price {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--accent-color);
+    white-space: nowrap;
+}
+
+.description {
+    color: var(--text-color);
+    font-size: 0.92rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.details {
+    list-style: none;
+    border-top: 1px solid var(--border-color);
+    padding-top: 12px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.details li {
+    margin-bottom: 4px;
+}
+
+/* Lábléc */
+.footer {
+    background-color: var(--primary-color);
+    color: #ebdcd0;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer h3 {
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Mobil reszponzivitás */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}

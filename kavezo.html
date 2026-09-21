@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Műhely Kávézó</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Fejléc és Navigáció -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Aroma <span>Műhely</span></a>
+            <nav>
+                <!-- Keresd meg ezt a részt az index.html-ben: -->
+                <ul class="nav-links">
+                    <li><a href="#kinalat">Kínálatunk</a></li>
+                    <li><a href="rolunk.html">Rólunk</a
+                    ></li> <!-- ITT MÓDOSÍTSD: rolunk.html-re mutat -->
+                    <li><a href="#kapcsolat">Kapcsolat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Üdvözlő rész -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Kézműves Kávéélmény Minden Nap</h1>
+            <p>Frissen pörkölt, minőségi arabica szemes kávékból készült különlegességek városszerte.</p>
+            <a href="#kinalat" class="btn">Nézd meg a kínálatot</a>
+        </div>
+    </section>
+
+    <!-- Kávé kínálat (5 féle kávé) -->
+    <main class="container" id="kinalat">
+        <h2 class="section-title">Kávékülönlegességeink</h2>
+        <p class="section-subtitle">Válassz a gondosan elkészített pörkölményeink közül</p>
+
+        <div class="coffee-grid">
+
+            <!-- 1. Kávé: Eszpresszó -->
+            <article class="coffee-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=600&q=80"
+                        alt="Klasszikus Eszpresszó">
+                    <span class="badge">Klasszikus</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3>Klasszikus Eszpresszó</h3>
+                        <span class="price">650 Ft</span>
+                    </div>
+                    <p class="description">
+                        Intenzív, sötét pörkölésű 100% arabica kávé vastag, mogyoróbarna cremával. A telt ízek és a
+                        mogyorós utóíz kedvelőinek.
+                    </p>
+                    <ul class="details">
+                        <li><strong>Összetevők:</strong> 30ml dupla ristretto eszpresszó</li>
+                        <li><strong>Koffeinszint:</strong> Magas</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- 2. Kávé: Cappuccino -->
+            <article class="coffee-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80"
+                        alt="Selymes Cappuccino">
+                    <span class="badge">Népszerű</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3>Selymes Cappuccino</h3>
+                        <span class="price">950 Ft</span>
+                    </div>
+                    <p class="description">
+                        Hagyományos olasz recept alapján: egyharmad eszpresszó, egyharmad gőzölt tej és egyharmad
+                        bársonyos tejhab a tetején.
+                    </p>
+                    <ul class="details">
+                        <li><strong>Összetevők:</strong> Eszpresszó, gőzölt tej, tejhab</li>
+                        <li><strong>Koffeinszint:</strong> Közepes</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- 3. Kávé: Latte Macchiato -->
+            <article class="coffee-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1593443320739-77f74939d0da?auto=format&fit=crop&w=600&q=80"
+                        alt="Latte Macchiato">
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3>Latte Macchiato</h3>
+                        <span class="price">1 150 Ft</span>
+                    </div>
+                    <p class="description">
+                        Látványos rétegezett kávékülönlegesség. Bőséges meleg tej, könnyed tejhab és a közepébe öntött
+                        friss eszpresszó találkozása.
+                    </p>
+                    <ul class="details">
+                        <li><strong>Összetevők:</strong> 200ml tej, 30ml eszpresszó</li>
+                        <li><strong>Koffeinszint:</strong> Lágy</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- 4. Kávé: Flat White -->
+            <article class="coffee-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=600&q=80"
+                        alt="Flat White">
+                    <span class="badge">Barista Kedvenc</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3>Kézműves Flat White</h3>
+                        <span class="price">1 250 Ft</span>
+                    </div>
+                    <p class="description">
+                        Dupla ristretto alapú kávé, finom textúrájú, mikrohabos tejjel felöntve. Erőteljes kávéíz krémes
+                        állaggal ötvözve.
+                    </p>
+                    <ul class="details">
+                        <li><strong>Összetevők:</strong> Dupla ristretto, mikrohabos tej</li>
+                        <li><strong>Koffeinszint:</strong> Magas</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- 5. Kávé: Jeges Karamell Latte -->
+            <article class="coffee-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80"
+                        alt="Jeges Karamell Latte">
+                    <span class="badge">Hűsítő</span>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3>Jeges Karamell Latte</h3>
+                        <span class="price">1 390 Ft</span>
+                    </div>
+                    <p class="description">
+                        Frissítő jeges kávé hideg tejjel, jégkockákkal és házi készítésű sós-karamell sziruppal
+                        megbolondítva.
+                    </p>
+                    <ul class="details">
+                        <li><strong>Összetevők:</strong> Eszpresszó, hideg tej, karamell, jég</li>
+                        <li><strong>Koffeinszint:</strong> Közepes</li>
+                    </ul>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Lábléc -->
+    <footer class="footer" id="kapcsolat">
+        <div class="container footer-content">
+            <div>
+                <h3>Aroma Műhely Kávézó</h3>
+                <p>1052 Budapest, Kávé utca 12.</p>
+                <p>Nyitvatartás: H-P: 07:00 - 19:00 | Szo-V: 08:00 - 20:00</p>
+            </div>
+            <div>
+                <p>&copy; 2026 Aroma Műhely Kávézó. Minden jog fenntartva.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
